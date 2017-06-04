@@ -8,8 +8,8 @@ urls = (
 	'/home/','home' # a page for logged-in users
 )
 
-client_id=os.environ['CLEVER_CLIENT_ID']
-client_secret=os.environ['CLEVER_CLIENT_SECRET']
+client_id=os.environ.get('CLEVER_CLIENT_ID')
+client_secret=os.environ.get('CLEVER_CLIENT_SECRET')
 redirect_uri="https://squidword.herokuapp.com/oauth/clever/"
 
 app = web.application(urls, globals())
